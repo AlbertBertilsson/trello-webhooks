@@ -14,7 +14,7 @@ function trello_log() {
   	"&urlSource=null" .
   	"&idList=" . getenv("trello-log") .
   	"&name=" . urlencode(date("Y-m-d g:i:s")) .
-  	"&desc=" . urlencode(var_export($server, true)) . "%0a%0a" . urlencode(var_export($_POST, true));
+  	"&desc=" . urlencode(var_export($server, true)) . "%0a%0a" . urlencode(file_get_contents('php://input'));
 
   $ch = curl_init($trellologurl);
 
