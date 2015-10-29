@@ -8,7 +8,7 @@ function log() {
 
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-  curl_setopt($ch, CURLOPT_POSTFIELDS, file_get_contents('php://input');
+  curl_setopt($ch, CURLOPT_POSTFIELDS, file_get_contents('php://input') );
 
   $atresult = curl_exec($ch);
 
