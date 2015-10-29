@@ -1,6 +1,5 @@
 <?php
-
-function log() {
+function loggly_log() {
 
   $logurl = "https://logs-01.loggly.com/inputs/" . getenv("loggly-token") . "/tag/trellotest/";
 
@@ -15,7 +14,8 @@ function log() {
   if(curl_errno($ch)) {
     echo "Failed to log! Curl error: " . curl_error($ch);
   }
+
   curl_close ($ch);
 }
 
-log();
+loggly_log();
