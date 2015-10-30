@@ -1,3 +1,5 @@
+<?php
+
 function loggly_log($data, $tag) {
   if (empty($tag)) $tag = "trellotest";
   
